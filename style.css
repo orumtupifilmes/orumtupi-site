@@ -103,3 +103,11 @@ footer {
   text-align: center;
   margin-top: 30px;
 }
+/* Fade-in apenas nos textos principais */
+.conteudo h1,
+.conteudo p,
+.galeria h2,
+.galeria p,
+footer p {
+  animation: fadeIn 1.2s ease-out;
+}
