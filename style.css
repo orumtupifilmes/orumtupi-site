@@ -77,3 +77,29 @@ footer {
   font-size: 0.9em;
   color: #bbb;
 }
+/* Conteúdo das páginas secundárias */
+.conteudo {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.conteudo h1 {
+  text-align: center;
+  color: #ff6600;
+  margin-bottom: 30px;
+}
+
+.imagem-grande {
+  width: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  margin-bottom: 20px;
+}
+
+.video {
+  text-align: center;
+  margin-top: 30px;
+}
