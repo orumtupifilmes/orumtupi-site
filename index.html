@@ -9,6 +9,7 @@
   <!-- Fonte Futura -->
   <style>
     @import url('https://fonts.cdnfonts.com/css/futura-pt');
+
     body {
       margin: 0;
       font-family: 'Futura PT', sans-serif;
@@ -47,7 +48,7 @@
       color: #555;
     }
 
-    /* Galeria */
+    /* Galeria em faixas */
     section.galeria {
       display: flex;
       flex-direction: column;
@@ -57,9 +58,17 @@
       margin: 2rem 0;
     }
 
-    section.galeria img {
+    .faixa {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
       width: 100%;
       max-width: 1200px;
+    }
+
+    .faixa img {
+      width: 48%; /* lado a lado no desktop */
       height: auto;
       display: block;
     }
@@ -103,6 +112,25 @@
       height: auto;
       display: block;
     }
+
+    /* ===== Responsividade ===== */
+    @media (max-width: 768px) {
+      /* Galeria: imagens empilham */
+      .faixa img {
+        width: 100%;
+      }
+
+      /* Menu: vertical */
+      nav.menu ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      /* Vídeos: altura proporcional à largura menor */
+      section.videos iframe {
+        height: calc(100vw * 9 / 16); /* mantém proporção 16:9 em celular */
+      }
+    }
   </style>
 </head>
 
@@ -117,8 +145,17 @@
 
   <!-- Galeria principal -->
   <section class="galeria">
-    <img src="assets/foto1.jpg" alt="foto 1 principal">
-    <img src="assets/foto2.jpg" alt="foto 2 principal">
+    <!-- Faixa 1 -->
+    <div class="faixa">
+      <img src="assets/foto1.jpg" alt="Foto 1">
+      <img src="assets/foto2.jpg" alt="Foto 2">
+    </div>
+
+    <!-- Faixa 2 -->
+    <div class="faixa">
+      <img src="assets/foto3.jpg" alt="Foto 3">
+      <img src="assets/foto4.jpg" alt="Foto 4">
+    </div>
   </section>
 
   <!-- Seção de vídeos -->
