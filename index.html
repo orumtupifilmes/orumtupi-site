@@ -5,11 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orum Tupi - Produtora Cultural</title>
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Banner -->
-  <header class="banner"></header>
 
+  <!-- Fonte Futura -->
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/futura-pt');
+    body {
+      margin: 0;
+      font-family: 'Futura PT', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Menu */
+    nav.menu {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+      gap: 2rem;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.1rem;
+      text-transform: lowercase;
+      transition: 0.3s;
+    }
+
+    nav.menu a:hover {
+      color: #555;
+    }
+
+    /* Galeria */
+    section.galeria {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    section.galeria img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+    }
+
+    /* Vídeos */
+    section.videos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    section.videos iframe {
+      width: 100%;
+      max-width: 1200px;
+      height: 675px; /* 16:9 */
+      border: none;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    /* Banner no rodapé */
+    .banner-rodape {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .banner-rodape img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
   <!-- Menu -->
   <nav class="menu">
     <ul>
@@ -20,27 +117,25 @@
 
   <!-- Galeria principal -->
   <section class="galeria">
-    <div class="filme">
-      <a href="umbigo.html">
-        <img src="/orumtupifilmes.github.io/orumtupi-site/assets/foto1.jpg" alt="foto do filme Umbigo">
-      </a>
-      <h2>Umbigo</h2>
-      <p>Documentário, 2015, 52 minutos<br>de Cauê Santana</p>
-    </div>
+    <img src="assets/foto1.jpg" alt="foto 1 principal">
+    <img src="assets/foto2.jpg" alt="foto 2 principal">
+  </section>
 
-    <div class="filme">
-      <a href="byebye.html">
-        <img src="/orumtupifilmes.github.io/orumtupi-site/assets/foto2.jpg" alt="foto do filme Bye Bye Motel">
-      </a>
-      <h2>Bye Bye Motel</h2>
-      <p>Ficção, Em desenvolvimento<br>de Naya Lopes</p>
-    </div>
+  <!-- Seção de vídeos -->
+  <section class="videos">
+    <iframe src="https://www.youtube.com/embed/JzMYf9FtkxE" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/JzMYf9FtkxE" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/JzMYf9FtkxE" allowfullscreen></iframe>
   </section>
 
   <!-- Rodapé -->
   <footer>
     <p>Localização: rua ioioioioi, cidade, Estado</p>
     <p>Contato: (99)99999999 | orumtupi@teste</p>
+
+    <div class="banner-rodape">
+      <img src="assets/banner.jpg" alt="banner do rodapé">
+    </div>
   </footer>
 </body>
 </html>
