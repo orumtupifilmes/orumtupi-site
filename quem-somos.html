@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos - Orum Tupi</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/futura-pt');
+
+    body {
+      margin: 0;
+      font-family: 'Futura PT', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Menu */
+    nav.menu {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+      gap: 2rem;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.1rem;
+      text-transform: lowercase;
+      transition: 0.3s;
+    }
+
+    nav.menu a:hover {
+      color: #a34b3d;
+    }
+
+    /* Galeria de integrantes */
+    section.equipe {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .integrante {
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .integrante img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #000;
+      cursor: pointer;
+    }
+
+    .integrante img:hover {
+      opacity: 0.85;
+      transform: scale(1.02);
+    }
+
+    .integrante p {
+      margin-top: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      border-top: 2px solid #000;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .banner-rodape img {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="sobre.html">sobre</a></li>
+      <li><a href="quem-somos.html">quem somos</a></li>
+      <li><a href="produtos.html">produtos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção da equipe -->
+  <section class="equipe">
+    <div class="integrante">
+      <a href="naya-lopes.html">
+        <img src="assets/NayaLopes.JPG" alt="Foto de Naya Lopes">
+      </a>
+      <p>Naya Lopes</p>
+    </div>
+
+    <div class="integrante">
+      <a href="caue-santana.html">
+        <img src="assets/CaueSantanafotoprovisoria.jpg" alt="Foto de Cauê Santana">
+      </a>
+      <p>Cauê Santana</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Endereço: Rua da Aurora, 325, Apto 1011, Edifício Ébano, Boa Vista,</p>
+    <p>Recife/PE, CEP 50050-000</p>
+    <p>Contato: +55 81 9792-3758 e +55 73 9801-9831 | orumtupi@gmail.com</p>
+
+    <div class="banner-rodape">
+      <img src="assets/banner.jpg" alt="banner do rodapé">
+    </div>
+  </footer>
+</body>
+</html>
