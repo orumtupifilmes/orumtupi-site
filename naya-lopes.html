@@ -4,30 +4,178 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naya Lopes | Orum Tupi Filmes</title>
+
+  <!-- Fonte Work Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Menu */
+    nav.menu {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+      gap: 2rem;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: lowercase;
+      transition: 0.3s;
+    }
+
+    nav.menu a:hover {
+      color: #a34b3d;
+    }
+
+    /* Container principal da bio */
+    .quem-somos-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Imagem da bio */
+    .bio-image img {
+      width: 300px;
+      max-width: 90%;
+      border: 2px solid #000;
+    }
+
+    /* Texto lateral */
+    .bio-text, .descricao-lateral {
+      flex: 1;
+      max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .bio-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .bio-text h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .bio-text a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .bio-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botão de voltar */
+    .voltar {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .voltar a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .voltar a:hover {
+      color: #000;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      border-top: 2px solid #000;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .banner-rodape img {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      display: block;
+    }
+
+    /* Responsividade */
+    @media (max-width: 900px) {
+      .quem-somos-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .bio-text {
+        text-align: center;
+        max-width: 90%;
+        margin-top: 2rem;
+      }
+      .bio-image img {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
-<body style="background-color: #fff; color: #000;">
 
-  <!-- ===== Banner em faixa (se usado nas demais páginas) ===== -->
-  <div class="banner"></div>
-
-  <!-- ===== Menu principal (idêntico às outras páginas) ===== -->
+<body>
+  <!-- Menu -->
   <nav class="menu">
     <ul>
-      <li><a href="index.html">início</a></li>
-      <li><a href="produtos.html">produtos</a></li>
+      <li><a href="sobre.html">sobre</a></li>
       <li><a href="quem-somos.html">quem somos</a></li>
-      <li><a href="contato.html">contato</a></li>
+      <li><a href="produtos.html">produtos</a></li>
     </ul>
   </nav>
 
-  <!-- ===== Conteúdo principal ===== -->
-  <main class="bio-container">
+  <!-- Conteúdo da bio -->
+  <div class="quem-somos-container">
+
+    <!-- Imagem da Naya -->
     <div class="bio-image">
       <img src="assets/NayaLopes.JPG" alt="Foto de Naya Lopes">
     </div>
 
-    <div class="bio-text">
+    <!-- Texto lateral -->
+    <div class="bio-text descricao-lateral">
       <h2>Naya Lopes</h2>
       <p><strong>Minibio</strong></p>
       <p>
@@ -50,18 +198,25 @@
 
       <p><strong>Premiações:</strong> Melhor filme segundo o júri popular do “3º Festival Etnográfico de Pernambuco” (2011); Menção Honrosa da “38ª Jornada de Cinema da Bahia”; Melhor roteiro de curta-metragem no 6° Encontro de Cinema e Vídeos dos Sertões – PI; e segundo lugar na Mostra Nacional Curta Sertão – PE, 2011.</p>
 
+      <!-- Botão de voltar -->
       <div class="voltar">
         <a href="index.html">← Voltar à página inicial</a>
       </div>
     </div>
-  </main>
 
-  <!-- ===== Rodapé ===== -->
+  </div>
+
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Orum Tupi Filmes</p>
+    <p>Endereço: Rua da Aurora, 325, Apto 1011, Edifício Ébano, Boa Vista,</p>
+    <p>Recife/PE, CEP 50050-000</p>
+    <p>Contato: +55 81 9792-3758 e +55 73 9801-9831 | orumtupi@gmail.com</p>
+
+    <div class="banner-rodape">
+      <img src="assets/banner.jpg" alt="banner do rodapé">
+    </div>
   </footer>
 
 </body>
 </html>
-
 
