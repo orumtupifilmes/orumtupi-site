@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - Orum Tupi</title>
+
+  <!-- Fonte Work Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.7;
+    }
+
+    /* Menu */
+    nav.menu {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+      gap: 2rem;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: lowercase;
+      transition: 0.3s;
+    }
+
+    nav.menu a:hover {
+      color: #a34b3d;
+    }
+
+    /* Conteúdo principal */
+    main {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    main h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #a34b3d;
+      margin-bottom: 2rem;
+    }
+
+    main h2 {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      color: #000;
+      text-transform: none;
+    }
+
+    main p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    main a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    main a:hover {
+      color: #000;
+    }
+
+    /* Fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Botão voltar */
+    .voltar {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .voltar a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .voltar a:hover {
+      color: #000;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      border-top: 2px solid #000;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .banner-rodape img {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      display: block;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      main {
+        padding: 0 1rem;
+      }
+
+      nav.menu ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="sobre.html">sobre</a></li>
+      <li><a href="quem-somos.html">quem somos</a></li>
+      <li><a href="produtos.html">produtos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main>
+    <h1>Produtos</h1>
+
+    <h2>1) “Foto” de Tamanco</h2>
+    <p><strong>Curta-metragem documentário</strong> — ? minutos<br>
+    Roteiro e direção: <strong>Cauê Santana</strong><br>
+    Local: PE - Brasil</p>
+    <p><strong>Teaser:</strong> —</p>
+    <p><strong>Sinopse:</strong> —</p>
+
+    <h2>2) Clipe de Imbé da Mata</h2>
+
+    <h2>3) Entre a serra e a malhada</h2>
+    <p><strong>Curta-metragem documentário</strong></p>
+
+    <h2>4) “Coco dendê”</h2>
+    <p><strong>Álbum visual de Carol do Coco</strong> — 11 minutos<br>
+    Direção: <strong>Naya Lopes</strong><br>
+    Local: Surubim - PE, 2022</p>
+    <p><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=3yKi1KjY3CU&list=RD3yKi1KjY3CU&start_radio=1" target="_blank">Assistir no YouTube</a></p>
+    <p><strong>Sinopse:</strong> Em meio ao cenário do agreste pernambucano, 4 canções de Carol do Coco contam histórias dessas estradas de terra que acompanham o nascer do dia e o anoitecer para tudo recomeçar.</p>
+
+    <h2>Umbigo</h2>
+    <p><strong>Sinopse Curta:</strong> Umbigo é como cordão de memórias! História de Dona Val, parteira. Seu nascimento, infância, retiradas, reencontros, e o conhecimento adquirido sobre um Brasil, dentro da sabedoria popular.</p>
+    <p><strong>Sinopse Longa:</strong></p>
+
+    <div class="voltar">
+      <a href="index.html">← Voltar à página inicial</a>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Endereço: Rua da Aurora, 325, Apto 1011, Edifício Ébano, Boa Vista,</p>
+    <p>Recife/PE, CEP 50050-000</p>
+    <p>Contato: +55 81 9792-3758 e +55 73 9801-9831 | orumtupi@gmail.com</p>
+
+    <div class="banner-rodape">
+      <img src="assets/banner.jpg" alt="banner do rodapé">
+    </div>
+  </footer>
+</body>
+</html>
