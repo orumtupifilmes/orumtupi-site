@@ -3,58 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cauê Santana - Orum Tupi</title>
+  <title>Cauê Santana | Orum Tupi Filmes</title>
 
   <!-- Fonte Work Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Estilos principais -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Estilo local (caso queira ajustar apenas esta página) -->
   <style>
     body {
+      margin: 0;
       font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
       background-color: #fff;
       color: #000;
-      margin: 0;
     }
 
-    /* Estrutura principal */
-    .perfil-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+    /* Menu */
+    nav.menu {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
       gap: 2rem;
-      max-width: 1000px;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: lowercase;
+      transition: 0.3s;
+    }
+
+    nav.menu a:hover {
+      color: #a34b3d;
+    }
+
+    /* Container principal da bio */
+    .quem-somos-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 3rem;
+      max-width: 1100px;
       margin: 4rem auto;
       padding: 0 1rem;
     }
 
-    .perfil-container img {
+    /* Imagem da bio */
+    .bio-image img {
       width: 300px;
-      height: auto;
+      max-width: 90%;
       border: 2px solid #000;
     }
 
-    .perfil-texto {
+    /* Texto lateral */
+    .bio-text, .descricao-lateral {
+      flex: 1;
       max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.6;
       text-align: left;
     }
 
-    .perfil-texto h1 {
+    .bio-text h2 {
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
 
-    .perfil-texto p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
+    .bio-text h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
     }
 
+    .bio-text a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .bio-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botão de voltar */
     .voltar {
       text-align: center;
       margin-top: 3rem;
@@ -71,15 +117,40 @@
       color: #000;
     }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .perfil-container {
-        flex-direction: column;
-        text-align: center;
-      }
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      border-top: 2px solid #000;
+    }
 
-      .perfil-texto {
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .banner-rodape img {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      display: block;
+    }
+
+    /* Responsividade */
+    @media (max-width: 900px) {
+      .quem-somos-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .bio-text {
         text-align: center;
+        max-width: 90%;
+        margin-top: 2rem;
+      }
+      .bio-image img {
+        width: 80%;
       }
     }
   </style>
@@ -95,21 +166,28 @@
     </ul>
   </nav>
 
-  <!-- Conteúdo principal -->
-  <section class="perfil-container">
-    <img src="assets/CaueSantanafotoprovisoria.jpg" alt="Foto de Cauê Santana">
-    <div class="perfil-texto">
-      <h1>Cauê Santana</h1>
+  <!-- Conteúdo da bio -->
+  <div class="quem-somos-container">
+
+    <!-- Imagem do Cauê -->
+    <div class="bio-image">
+      <img src="assets/CaueSantanafotoprovisoria.jpg" alt="Foto de Cauê Santana">
+    </div>
+
+    <!-- Texto lateral -->
+    <div class="bio-text descricao-lateral">
+      <h2>Cauê Santana</h2>
       <h3>Minibio</h3>
       <p>
-        Aqui está apresentada uma minibio provisória para Cauê Santana, e nesta seção apresentaremos a trajetória e produções.
+        Cauê Santana é artista e produtor audiovisual, envolvido em projetos independentes de cinema e vídeo com foco em narrativas periféricas e descolonização do olhar. Aqui você encontrará informações sobre suas produções, colaborações e projetos recentes.
       </p>
-    </div>
-  </section>
 
-  <!-- Voltar -->
-  <div class="voltar">
-    <a href="index.html">← Voltar à página inicial</a>
+      <!-- Botão de voltar -->
+      <div class="voltar">
+        <a href="index.html">← Voltar à página inicial</a>
+      </div>
+    </div>
+
   </div>
 
   <!-- Rodapé -->
@@ -122,5 +200,7 @@
       <img src="assets/banner.jpg" alt="banner do rodapé">
     </div>
   </footer>
+
 </body>
 </html>
+
