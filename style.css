@@ -111,3 +111,18 @@ footer {
 footer p {
   animation: fadeIn 1.2s ease-out;
 }
+.voltar {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.voltar a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.voltar a:hover {
+  color: #fff;
+}
