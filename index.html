@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orum Tupi - Produtora Cultural</title>
+
+  <!-- Fonte Work Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Fonte Futura -->
   <style>
-    @import url('https://fonts.cdnfonts.com/css/futura-pt');
-
     body {
       margin: 0;
-      font-family: 'Futura PT', sans-serif;
+      font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
       background-color: #fff;
       color: #000;
+      text-align: center;
+      line-height: 1.6;
     }
 
     /* Menu */
@@ -23,7 +24,6 @@
       background-color: #fff;
       border-bottom: 2px solid #000;
       padding: 1rem 0;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -40,6 +40,7 @@
     nav.menu a {
       text-decoration: none;
       color: #000;
+      font-weight: 600;
       font-size: 1.1rem;
       text-transform: lowercase;
       transition: 0.3s;
@@ -49,7 +50,7 @@
       color: #a34b3d; /* vermelho terroso suave */
     }
 
-    /* Galeria em faixas */
+    /* Galeria */
     section.galeria {
       display: flex;
       flex-direction: column;
@@ -69,7 +70,7 @@
     }
 
     .faixa img {
-      width: 48%; /* lado a lado no desktop */
+      width: 48%;
       height: auto;
       display: block;
       border: 2px solid #000;
@@ -94,7 +95,6 @@
       line-height: 1.5;
     }
 
-    /* Banner no rodapé */
     .banner-rodape {
       width: 100%;
       margin-top: 2rem;
@@ -106,7 +106,7 @@
       display: block;
     }
 
-    /* ===== Responsividade ===== */
+    /* Responsividade */
     @media (max-width: 768px) {
       .faixa img {
         width: 100%;
@@ -132,21 +132,21 @@
 
   <!-- Galeria principal -->
   <section class="galeria">
-    <!-- Faixa 1 (duas imagens verticais) -->
+    <!-- Faixa 1 (duas verticais) -->
     <div class="faixa">
-      <img src="assets/cartazprovisorioterrapretaenegraindia.jpg" alt="Cartaz provisorio Terra Preta e Negra Índia">
-      <img src="assets/FilmeUmbigobanner.png" alt="Banner do filme Umbigo">
+      <img src="assets/cartazprovisorioterrapretaenegraindia.jpg" alt="Cartaz provisório Terra Preta e Negra Índia">
+      <img src="assets/FilmeUmbigobanner.jpg" alt="Banner do filme Umbigo">
     </div>
 
-    <!-- Faixa 2 (duas imagens horizontais) -->
+    <!-- Faixa 2 (duas horizontais) -->
     <div class="faixa">
-      <img src="assets/MaeTerra.jpg" alt="Imagem Mãe Terra">
-      <img src="assets/CasadeZecaRitoFinal.jpg" alt="Imagem Casa de Zeca Rito Final">
+      <img src="assets/MaeTerra.jpeg" alt="Imagem Mãe Terra">
+      <img src="assets/CasadeZecaRitoFinal.jpeg" alt="Imagem Casa de Zeca Rito Final">
     </div>
 
-    <!-- Faixa 3 (duas imagens horizontais) -->
+    <!-- Faixa 3 (duas horizontais) -->
     <div class="faixa">
-      <img src="assets/Byebyemotel1.JPG" alt="Imagem Bye Bye Motel">
+      <img src="assets/Byebyemotel1.jpg" alt="Imagem Bye Bye Motel">
       <img src="assets/ByeByeMotelInfos.jpg" alt="Informações Bye Bye Motel">
     </div>
   </section>
@@ -163,4 +163,5 @@
   </footer>
 </body>
 </html>
+
 
