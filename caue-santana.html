@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cauê Santana - Orum Tupi</title>
+
+  <!-- Fonte Work Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos principais -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Estilo local (caso queira ajustar apenas esta página) -->
+  <style>
+    body {
+      font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      margin: 0;
+    }
+
+    /* Estrutura principal */
+    .perfil-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .perfil-container img {
+      width: 300px;
+      height: auto;
+      border: 2px solid #000;
+    }
+
+    .perfil-texto {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .perfil-texto h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .perfil-texto p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .voltar {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .voltar a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .voltar a:hover {
+      color: #000;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .perfil-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .perfil-texto {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="sobre.html">sobre</a></li>
+      <li><a href="quem-somos.html">quem somos</a></li>
+      <li><a href="produtos.html">produtos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <section class="perfil-container">
+    <img src="assets/CaueSantanafotoprovisoria.jpg" alt="Foto de Cauê Santana">
+    <div class="perfil-texto">
+      <h1>Cauê Santana</h1>
+      <h3>Minibio</h3>
+      <p>
+        Aqui está apresentada uma minibio provisória para Cauê Santana, e nesta seção apresentaremos a trajetória e produções.
+      </p>
+    </div>
+  </section>
+
+  <!-- Voltar -->
+  <div class="voltar">
+    <a href="index.html">← Voltar à página inicial</a>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Endereço: Rua da Aurora, 325, Apto 1011, Edifício Ébano, Boa Vista,</p>
+    <p>Recife/PE, CEP 50050-000</p>
+    <p>Contato: +55 81 9792-3758 e +55 73 9801-9831 | orumtupi@gmail.com</p>
+
+    <div class="banner-rodape">
+      <img src="assets/banner.jpg" alt="banner do rodapé">
+    </div>
+  </footer>
+</body>
+</html>
