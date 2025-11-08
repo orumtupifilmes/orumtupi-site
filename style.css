@@ -1,5 +1,5 @@
-/* Importa a fonte Work Sans */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+/* ===== Import da fonte Work Sans ===== */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
 
 /* ===== Estilos gerais ===== */
 body {
@@ -7,7 +7,7 @@ body {
   padding: 0;
   background-color: #000;
   color: #fff;
-  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   text-align: center;
   line-height: 1.6;
 }
@@ -25,7 +25,6 @@ body {
 .menu {
   background-color: #000;
   padding: 20px 0;
-  border-bottom: 1px solid #222;
 }
 
 .menu ul {
@@ -38,7 +37,7 @@ body {
 }
 
 .menu a {
-  color: #d94f04; /* vermelho terroso suave */
+  color: #ff6600;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
@@ -50,48 +49,101 @@ body {
   color: #fff;
 }
 
-/* ===== Galeria ===== */
+/* ===== Galeria principal ===== */
 .galeria {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.faixa {
+  display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
-  gap: 40px;
-  padding: 40px 20px;
-}
-
-.filme {
-  max-width: 400px;
-}
-
-.filme img {
   width: 100%;
+  max-width: 1200px;
+}
+
+.faixa img {
+  width: 48%;
   height: auto;
+  display: block;
   border: 2px solid #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.faixa img:hover {
+  opacity: 0.85;
+}
+
+/* ===== Galeria de equipe ===== */
+section.equipe {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.integrante {
+  width: 300px;
   transition: transform 0.3s ease;
 }
 
-.filme img:hover {
+.integrante img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.integrante img:hover {
+  opacity: 0.85;
   transform: scale(1.02);
 }
 
-.filme h2 {
-  margin-top: 10px;
-  font-size: 1.3em;
-  color: #d94f04;
+.integrante p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Indicativo de clique na imagem */
+.clique-indicativo {
+  font-size: 0.9rem;
+  color: #ff6600;
+  margin-top: 0.3rem;
+  font-weight: 500;
 }
 
 /* ===== Conteúdo das páginas secundárias ===== */
-.conteudo {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
+.conteudo, main {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
   text-align: left;
+  animation: fadeIn 1s ease-in;
 }
 
-.conteudo h1 {
+.conteudo h1, main h1 {
   text-align: center;
-  color: #d94f04;
-  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ff6600;
+  margin-bottom: 2rem;
 }
 
 .imagem-grande {
@@ -108,10 +160,24 @@ body {
 
 /* ===== Rodapé ===== */
 footer {
-  background-color: #111;
-  padding: 20px 0;
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  border-top: 2px solid #fff;
   font-size: 0.9em;
   color: #bbb;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.banner-rodape img {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  display: block;
 }
 
 /* ===== Botão Voltar ===== */
@@ -121,7 +187,7 @@ footer {
 }
 
 .voltar a {
-  color: #d94f04;
+  color: #ff6600;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -131,9 +197,9 @@ footer {
   color: #fff;
 }
 
-/* ===== Animação Fade-in ===== */
+/* ===== Animação fade-in ===== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -141,6 +207,40 @@ footer {
 .conteudo p,
 .galeria h2,
 .galeria p,
-footer p {
+footer p,
+.main h1,
+main p {
   animation: fadeIn 1.2s ease-out;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .faixa img {
+    width: 100%;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section.equipe {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .integrante {
+    width: 80%;
+  }
+
+  .conteudo, main {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main, .conteudo {
+    font-size: 1rem;
+  }
 }
