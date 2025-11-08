@@ -1,14 +1,18 @@
-/* Estilos gerais */
+/* Importa a fonte Work Sans */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ===== Estilos gerais ===== */
 body {
   margin: 0;
   padding: 0;
   background-color: #000;
   color: #fff;
-  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
+  line-height: 1.6;
 }
 
-/* Banner com repetição em faixa */
+/* ===== Banner com repetição em faixa ===== */
 .banner {
   background-image: url('assets/banner.jpg');
   background-repeat: repeat-x;
@@ -17,10 +21,11 @@ body {
   width: 100%;
 }
 
-/* Menu */
+/* ===== Menu ===== */
 .menu {
   background-color: #000;
   padding: 20px 0;
+  border-bottom: 1px solid #222;
 }
 
 .menu ul {
@@ -33,10 +38,10 @@ body {
 }
 
 .menu a {
-  color: #ff6600;
+  color: #d94f04; /* vermelho terroso suave */
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1px;
   transition: color 0.3s ease;
 }
@@ -45,7 +50,7 @@ body {
   color: #fff;
 }
 
-/* Galeria */
+/* ===== Galeria ===== */
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -62,33 +67,30 @@ body {
   width: 100%;
   height: auto;
   border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.filme img:hover {
+  transform: scale(1.02);
 }
 
 .filme h2 {
   margin-top: 10px;
   font-size: 1.3em;
-  color: #ff6600;
+  color: #d94f04;
 }
 
-/* Rodapé */
-footer {
-  background-color: #111;
-  padding: 20px 0;
-  font-size: 0.9em;
-  color: #bbb;
-}
-/* Conteúdo das páginas secundárias */
+/* ===== Conteúdo das páginas secundárias ===== */
 .conteudo {
   max-width: 800px;
   margin: 60px auto;
   padding: 0 20px;
   text-align: left;
-  line-height: 1.6;
 }
 
 .conteudo h1 {
   text-align: center;
-  color: #ff6600;
+  color: #d94f04;
   margin-bottom: 30px;
 }
 
@@ -103,26 +105,42 @@ footer {
   text-align: center;
   margin-top: 30px;
 }
-/* Fade-in apenas nos textos principais */
-.conteudo h1,
-.conteudo p,
-.galeria h2,
-.galeria p,
-footer p {
-  animation: fadeIn 1.2s ease-out;
+
+/* ===== Rodapé ===== */
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  font-size: 0.9em;
+  color: #bbb;
 }
+
+/* ===== Botão Voltar ===== */
 .voltar {
   text-align: center;
   margin-top: 40px;
 }
 
 .voltar a {
-  color: #ff6600;
+  color: #d94f04;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .voltar a:hover {
   color: #fff;
+}
+
+/* ===== Animação Fade-in ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.conteudo h1,
+.conteudo p,
+.galeria h2,
+.galeria p,
+footer p {
+  animation: fadeIn 1.2s ease-out;
 }
