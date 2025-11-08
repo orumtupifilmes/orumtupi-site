@@ -328,3 +328,90 @@ main p {
   }
 }
 
+/* ===== PERFIS INDIVIDUAIS (Naya, Cauê, etc) ===== */
+.bio-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.bio-image img {
+  width: 300px;
+  height: auto;
+  border: 2px solid #000;
+}
+
+.bio-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.bio-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.bio-text h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.bio-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.bio-text a {
+  color: #a34b3d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.bio-text a:hover {
+  text-decoration: underline;
+}
+
+/* Voltar */
+.voltar {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.voltar a {
+  color: #a34b3d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.voltar a:hover {
+  color: #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-text {
+    text-align: center;
+  }
+
+  .bio-image img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
