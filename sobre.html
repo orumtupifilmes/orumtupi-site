@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre - Orum Tupi</title>
+
+  <!-- Fonte Work Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    @import url('https://fonts.cdnfonts.com/css/futura-pt');
-
     body {
       margin: 0;
-      font-family: 'Futura PT', sans-serif;
+      font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
       background-color: #fff;
       color: #000;
+      line-height: 1.7;
     }
 
     /* Menu */
@@ -22,10 +23,10 @@
       background-color: #fff;
       border-bottom: 2px solid #000;
       padding: 1rem 0;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+      text-align: center;
     }
 
     nav.menu ul {
@@ -39,6 +40,7 @@
     nav.menu a {
       text-decoration: none;
       color: #000;
+      font-weight: 600;
       font-size: 1.1rem;
       text-transform: lowercase;
       transition: 0.3s;
@@ -53,7 +55,6 @@
       max-width: 900px;
       margin: 4rem auto;
       padding: 0 1.5rem;
-      line-height: 1.7;
       font-size: 1.1rem;
       animation: fadeIn 1s ease-in;
     }
@@ -72,6 +73,22 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    .voltar {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .voltar a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .voltar a:hover {
+      color: #000;
+    }
+
     /* Rodapé */
     footer {
       text-align: center;
@@ -83,7 +100,6 @@
     footer p {
       margin: 0.5rem 0;
       font-size: 1rem;
-      line-height: 1.5;
     }
 
     .banner-rodape img {
@@ -116,9 +132,8 @@
     <p>Dessa forma, a ORUM TUPI FILMES se revela e se declara como uma produtora afroindígena, vocacionada, comprometida com a diversidade cultural e étnica do povo nordestino e brasileiro.</p>
 
     <div class="voltar">
-  <a href="index.html">← Voltar à página inicial</a>
-</div>
-
+      <a href="index.html">← Voltar à página inicial</a>
+    </div>
   </main>
 
   <!-- Rodapé -->
