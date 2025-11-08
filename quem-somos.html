@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quem Somos - Orum Tupi</title>
+
+  <!-- Fonte Work Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    @import url('https://fonts.cdnfonts.com/css/futura-pt');
-
     body {
       margin: 0;
-      font-family: 'Futura PT', sans-serif;
+      font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
       background-color: #fff;
       color: #000;
+      text-align: center;
     }
 
     /* Menu */
@@ -22,7 +23,6 @@
       background-color: #fff;
       border-bottom: 2px solid #000;
       padding: 1rem 0;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -39,16 +39,17 @@
     nav.menu a {
       text-decoration: none;
       color: #000;
+      font-weight: 600;
       font-size: 1.1rem;
       text-transform: lowercase;
       transition: 0.3s;
     }
 
     nav.menu a:hover {
-      color: #a34b3d;
+      color: #a34b3d; /* vermelho terroso suave */
     }
 
-    /* Galeria de integrantes */
+    /* Seção da equipe */
     section.equipe {
       display: flex;
       justify-content: center;
@@ -84,6 +85,22 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+
+    .voltar {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .voltar a {
+      color: #a34b3d;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .voltar a:hover {
+      color: #000;
     }
 
     /* Rodapé */
@@ -133,11 +150,12 @@
         <img src="assets/CaueSantanafotoprovisoria.jpg" alt="Foto de Cauê Santana">
       </a>
       <p>Cauê Santana</p>
-      <div class="voltar">
-  <a href="index.html">← Voltar à página inicial</a>
-</div>
     </div>
   </section>
+
+  <div class="voltar">
+    <a href="index.html">← Voltar à página inicial</a>
+  </div>
 
   <!-- Rodapé -->
   <footer>
@@ -151,3 +169,4 @@
   </footer>
 </body>
 </html>
+
