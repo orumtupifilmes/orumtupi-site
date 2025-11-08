@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre - Orum Tupi</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/futura-pt');
+
+    body {
+      margin: 0;
+      font-family: 'Futura PT', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Menu */
+    nav.menu {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+      gap: 2rem;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.1rem;
+      text-transform: lowercase;
+      transition: 0.3s;
+    }
+
+    nav.menu a:hover {
+      color: #a34b3d;
+    }
+
+    /* Conteúdo principal */
+    main {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    main h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #a34b3d;
+      margin-bottom: 2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      border-top: 2px solid #000;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .banner-rodape img {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="sobre.html">sobre</a></li>
+      <li><a href="quem-somos.html">quem somos</a></li>
+      <li><a href="produtos.html">produtos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main>
+    <h1>Sobre a Orum Tupi</h1>
+
+    <p>Fundada em 2013, a <strong>ORUM TUPI FILMES E PRODUTORA CULTURAL</strong> é uma empresa nordestina que atua na prestação de serviços para a cadeia do audiovisual, cinema e produções multiculturais nacionais e internacionais há mais de 12 anos.</p>
+
+    <p>Sediada em Pernambuco e constituída pela associação dos cineastas <strong>Cauê Santana</strong> e <strong>Naya Lopes</strong>, a produtora tem como principal motivação a salvaguarda da memória dos saberes tradicionais oriundos de matriz afroindígena e a conquista de novos espaços para a criação de imagens e narrativas negras positivas, em busca de justiça social.</p>
+
+    <p>Dessa forma, a ORUM TUPI FILMES se revela e se declara como uma produtora afroindígena, vocacionada, comprometida com a diversidade cultural e étnica do povo nordestino e brasileiro.</p>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Endereço: Rua da Aurora, 325, Apto 1011, Edifício Ébano, Boa Vista,</p>
+    <p>Recife/PE, CEP 50050-000</p>
+    <p>Contato: +55 81 9792-3758 e +55 73 9801-9831 | orumtupi@gmail.com</p>
+
+    <div class="banner-rodape">
+      <img src="assets/banner.jpg" alt="banner do rodapé">
+    </div>
+  </footer>
+</body>
+</html>
