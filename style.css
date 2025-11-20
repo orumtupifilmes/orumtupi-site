@@ -11,15 +11,46 @@ body {
   text-align: center;
   line-height: 1.6;
 }
+
 .clique-indicativo {
-  font-size: 1rem;        /* tamanho confortável para desktop e mobile */
-  color: #ff6600;         /* laranja, igual aos links do menu */
-  margin-top: 1rem;       /* espaço acima do texto */
-  font-weight: 500;       /* peso médio, consistente com outros textos */
-  text-align: center;     /* centraliza o texto */
+  font-size: 1rem;
+  color: #ff6600;
+  margin-top: 1rem;
+  font-weight: 500;
+  text-align: center;
 }
 
-/* ===== Banner com repetição em faixa ===== */
+/* ===========================================
+   IMAGENS GIGANTES (ESTILO OLAR FILMES)
+   =========================================== */
+
+/* Imagem gigante padrão 100% da tela */
+.imagem-full {
+  width: 100vw;
+  height: 95vh;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+
+/* Tela cheia total */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Versão para galerias de grande impacto */
+.faixa-grande img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Banner com repetição ===== */
 .banner {
   background-image: url('assets/banner.jpg');
   background-repeat: repeat-x;
@@ -75,6 +106,7 @@ body {
   max-width: 1200px;
 }
 
+/* Miniaturas padrão */
 .faixa img {
   width: 48%;
   height: auto;
@@ -87,7 +119,7 @@ body {
   opacity: 0.85;
 }
 
-/* ===== Galeria de equipe ===== */
+/* ===== Equipe ===== */
 section.equipe {
   display: flex;
   justify-content: center;
@@ -125,7 +157,6 @@ section.equipe {
   letter-spacing: 0.5px;
 }
 
-/* Indicativo de clique na imagem */
 .clique-indicativo {
   font-size: 0.9rem;
   color: #ff6600;
@@ -133,7 +164,7 @@ section.equipe {
   font-weight: 500;
 }
 
-/* ===== Conteúdo das páginas secundárias ===== */
+/* ===== Páginas secundárias ===== */
 .conteudo, main {
   max-width: 900px;
   margin: 4rem auto;
@@ -186,7 +217,8 @@ footer p {
   margin-top: 2rem;
   display: block;
 }
-/* Rodapé com imagens esquerda/centro/direita */
+
+/* Rodapé com duas laterais + texto central */
 .rodape-container {
   display: flex;
   justify-content: space-between;
@@ -210,18 +242,6 @@ footer p {
   margin: 0.3rem 0;
   font-size: 1rem;
   line-height: 1.4;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .rodape-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .logo-rodape {
-    height: 45px;
-  }
 }
 
 /* ===== Botão Voltar ===== */
@@ -281,6 +301,10 @@ main p {
   .conteudo, main {
     padding: 0 1rem;
   }
+
+  .imagem-full {
+    height: 70vh;
+  }
 }
 
 @media (max-width: 480px) {
@@ -289,7 +313,7 @@ main p {
   }
 }
 
-/* ===== PERFIS INDIVIDUAIS (Naya, Cauê, etc) ===== */
+/* ===== Perfis Individuais ===== */
 .bio-container {
   display: flex;
   flex-wrap: wrap;
@@ -343,40 +367,7 @@ main p {
   text-decoration: underline;
 }
 
-/* Voltar */
-.voltar {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.voltar a {
-  color: #a34b3d;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.voltar a:hover {
-  color: #000;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .bio-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .bio-text {
-    text-align: center;
-  }
-
-  .bio-image img {
-    width: 80%;
-    max-width: 300px;
-  }
-}
-/* ===== PRODUTOS ===== */
+/* ===== Produtos ===== */
 .produto-item {
   margin-bottom: 40px;
 }
@@ -415,7 +406,6 @@ main p {
   margin-bottom: 1rem;
 }
 
-/* Responsividade para produtos */
 @media (max-width: 768px) {
   .produto-grid {
     flex-direction: column;
