@@ -434,19 +434,6 @@ main p {
   display: block;
 }
 
-/* Texto sobreposto */
-.slider-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1.4;
-  font-weight: 500;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideText 1.4s ease forwards;
 }
 
 /* animação do texto */
@@ -484,7 +471,6 @@ main p {
   font-weight: 500;
   opacity: 0;
   transform: translateY(20px);
-  animation: slideText 1.4s ease forwards;
 }
 
 /* animação do texto */
