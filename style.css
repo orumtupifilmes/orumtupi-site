@@ -417,9 +417,9 @@ main p {
   transform: translateX(-50%) translateY(20px);
   background: rgba(0,0,0,0.55);
   color: #fff;
-  font-size: 1.1rem;
-  line-height: 1.4;
-  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 400;
   padding: 10px 15px;
   border-radius: 4px;
   text-align: center;
