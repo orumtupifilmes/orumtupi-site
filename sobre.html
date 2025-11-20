@@ -111,6 +111,8 @@
   </style>
 </head>
 
+
+  
 <body>
   <!-- Menu -->
   <nav class="menu">
@@ -150,6 +152,27 @@
     </div>
 
     <img class="logo-rodape direita" src="assets/Negativo_Logo_ORUMTUPI_upgrade2.png" alt="Logo Orum Tupi direita">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".slider-item");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const caption = entry.target.querySelector(".slider-caption");
+
+      if (entry.intersectionRatio >= 0.5) {
+        caption.classList.add("visible");
+      } else {
+        caption.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: [0, 0.5, 1]  // ativa ao atingir metade
+  });
+
+  items.forEach(item => observer.observe(item));
+});
+</script>
 
   </div>
 
