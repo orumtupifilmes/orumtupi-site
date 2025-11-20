@@ -422,4 +422,43 @@ main p {
     font-size: 1.2rem;
   }
 }
+.slider-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto sobreposto */
+.slider-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideText 1.4s ease forwards;
+}
+
+/* animação do texto */
+@keyframes slideText {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
