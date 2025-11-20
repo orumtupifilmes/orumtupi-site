@@ -107,13 +107,6 @@ body {
 }
 
 /* Miniaturas padrão */
-.faixa img {
-  width: 48%;
-  height: auto;
-  display: block;
-  border: 2px solid #fff;
-  transition: 0.3s ease-in-out;
-}
 
 .faixa img:hover {
   opacity: 0.85;
@@ -496,5 +489,23 @@ main p {
 .slider-caption.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+.slider-item {
+  position: relative;
+}
+
+.slider-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 4px;
+  text-align: left;
 }
 
