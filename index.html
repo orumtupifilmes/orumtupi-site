@@ -19,7 +19,7 @@
       line-height: 1.6;
     }
 
-    /* Menu */
+    /* ===== MENU ===== */
     nav.menu {
       background-color: #fff;
       border-bottom: 2px solid #000;
@@ -47,48 +47,60 @@
     }
 
     nav.menu a:hover {
-      color: #a34b3d; /* vermelho terroso suave */
+      color: #a34b3d;
     }
 
-    /* Galeria */
+    /* ===== GALERIA ===== */
     section.galeria {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       gap: 2rem;
-      margin: 2rem 0;
+      margin: 0;
     }
 
     .faixa {
+      width: 100%;
+      max-width: 1600px;
       display: flex;
-      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
-      width: 100%;
-      max-width: 1200px;
     }
 
-    /* Cada link dentro da faixa funciona como bloco flexível */
     .faixa a {
+      width: 100%;
       display: block;
-      width: 48%; /* mantém lado a lado */
     }
 
+    /* ===== IMAGENS GIGANTES estilo Olar Filmes ===== */
     .faixa img {
-      width: 100%; /* preenche o link pai */
-      height: auto;
+      width: 100vw;
+      height: 95vh;
+      object-fit: cover;
       display: block;
-      border: 2px solid #000;
-      transition: 0.3s ease-in-out;
+      border: none;
       cursor: pointer;
+      transition: opacity 0.3s ease;
     }
 
     .faixa img:hover {
       opacity: 0.85;
     }
 
-    /* Rodapé */
+    /* ===== ANIMAÇÃO DE DESLIZAMENTO ===== */
+    .revela {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .revela.visivel {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RODAPÉ ===== */
     footer {
       text-align: center;
       margin-top: 4rem;
@@ -102,21 +114,15 @@
       line-height: 1.5;
     }
 
-    .banner-rodape {
-      width: 100%;
-      margin-top: 2rem;
-    }
-
     .banner-rodape img {
       width: 100%;
       height: auto;
-      display: block;
     }
 
-    /* Responsividade */
+    /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 768px) {
-      .faixa a {
-        width: 100%; /* uma abaixo da outra no mobile */
+      .faixa img {
+        height: 70vh;
       }
 
       nav.menu ul {
@@ -128,7 +134,8 @@
 </head>
 
 <body>
-  <!-- Menu -->
+
+  <!-- MENU -->
   <nav class="menu">
     <ul>
       <li><a href="sobre.html">sobre</a></li>
@@ -137,82 +144,95 @@
     </ul>
   </nav>
 
-  <!-- Galeria principal -->
-<section class="galeria">
+  <!-- GALERIA PRINCIPAL -->
+  <section class="galeria">
 
-  <!-- Faixa 1 (duas imagens) -->
-  <div class="faixa">
-    <a href="naya-lopes.html">
-      <img src="assets/TerraPretaeNegraíndia.png" alt="Terra Preta e NegraÍndia">
-    </a>
-    <a href="caue-santana.html">
-      <img src="assets/FilmeUmbigobanner.png" alt="Banner do filme Umbigo">
-    </a>
-  </div>
-
-  <!-- Faixa 2 (imagem única grande) -->
-  <div class="faixa">
-    <a href="naya-lopes.html" style="width:100%;">
-      <img src="assets/MaeTerra.jpg" alt="Imagem Mãe Terra">
-    </a>
-  </div>
-
-  <!-- Faixa 3 (imagem única grande) -->
-  <div class="faixa">
-    <a href="naya-lopes.html" style="width:100%;">
-      <img src="assets/CasadeZecaRitoFinal.jpg" alt="Imagem Casa de Zeca Rito Final">
-    </a>
-  </div>
-
-  <!-- Faixa 4 (imagem única grande) -->
-  <div class="faixa">
-    <a href="naya-lopes.html" style="width:100%;">
-      <img src="assets/Byebyemotel1.JPG" alt="Imagem Bye Bye Motel">
-    </a>
-  </div>
-
-  <!-- Faixa 5 (imagem única grande) -->
-  <div class="faixa">
-    <a href="naya-lopes.html" style="width:100%;">
-      <img src="assets/ByeByeMotelInfos.jpg" alt="Informações Bye Bye Motel">
-    </a>
-  </div>
-
-  <!-- Faixa 6 (imagem única grande) -->
-  <div class="faixa">
-    <a href="produtos.html" style="width:100%;">
-      <img src="assets/MestresdoMovimento.png" alt="Imagem Mestres do Movimento">
-    </a>
-  </div>
-
-  <!-- Faixa 7 (imagem única grande) -->
-  <div class="faixa">
-    <a href="produtos.html" style="width:100%;">
-      <img src="assets/Caminhosdoorgulho2.jpeg" alt="Imagem Caminhos do Orgulho">
-    </a>
-  </div>
-
-</section>
-
-
-  <!-- Rodapé -->
- <footer>
-
-  <div class="rodape-container">
-
-    <img class="logo-rodape esquerda" src="assets/orum_tupi_prod_cul_negativo.png" alt="Logo Orum Tupi esquerda">
-
-    <div class="rodape-texto">
-      <p>Endereço: Rua da Aurora, 325, Apto 1011, Edifício Ébano, Boa Vista,</p>
-      <p>Recife/PE, CEP 50050-000</p>
-      <p>Contato: +55 81 9792-3758 e +55 73 9801-9831 | orumtupi@gmail.com</p>
+    <!-- FAIXA 1 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <img src="assets/TerraPretaeNegraíndia.png" alt="Terra Preta e NegraÍndia">
+      </a>
+      <a href="caue-santana.html">
+        <img src="assets/FilmeUmbigobanner.png" alt="Banner do filme Umbigo">
+      </a>
     </div>
 
-    <img class="logo-rodape direita" src="assets/Negativo_Logo_ORUMTUPI_upgrade2.png" alt="Logo Orum Tupi direita">
+    <!-- FAIXA 2 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <img src="assets/MaeTerra.jpg" alt="Imagem Mãe Terra">
+      </a>
+    </div>
 
-  </div>
+    <!-- FAIXA 3 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <img src="assets/CasadeZecaRitoFinal.jpg" alt="Imagem Casa de Zeca Rito Final">
+      </a>
+    </div>
 
-</footer>
+    <!-- FAIXA 4 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <img src="assets/Byebyemotel1.JPG" alt="Imagem Bye Bye Motel">
+      </a>
+    </div>
+
+    <!-- FAIXA 5 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <img src="assets/ByeByeMotelInfos.jpg" alt="Informações Bye Bye Motel">
+      </a>
+    </div>
+
+    <!-- FAIXA 6 -->
+    <div class="faixa revela">
+      <a href="produtos.html">
+        <img src="assets/MestresdoMovimento.png" alt="Imagem Mestres do Movimento">
+      </a>
+    </div>
+
+    <!-- FAIXA 7 -->
+    <div class="faixa revela">
+      <a href="produtos.html">
+        <img src="assets/Caminhosdoorgulho2.jpeg" alt="Imagem Caminhos do Orgulho">
+      </a>
+    </div>
+
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+
+    <div class="rodape-container">
+      <img class="logo-rodape esquerda" src="assets/orum_tupi_prod_cul_negativo.png" alt="Logo Orum Tupi esquerda">
+
+      <div class="rodape-texto">
+        <p>Endereço: Rua da Aurora, 325, Apto 1011, Edifício Ébano, Boa Vista,</p>
+        <p>Recife/PE, CEP 50050-000</p>
+        <p>Contato: +55 81 9792-3758 e +55 73 9801-9831 | orumtupi@gmail.com</p>
+      </div>
+
+      <img class="logo-rodape direita" src="assets/Negativo_Logo_ORUMTUPI_upgrade2.png" alt="Logo Orum Tupi direita">
+    </div>
+
+  </footer>
+
+  <!-- SCRIPT DAS ANIMAÇÕES -->
+  <script>
+    const elementos = document.querySelectorAll('.revela');
+
+    const observer = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visivel');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
 
