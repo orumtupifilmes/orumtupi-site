@@ -193,7 +193,7 @@ footer p {
 .rodape-texto p {
   margin: 0.3rem 0;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 /* ===== Botão Voltar ===== */
@@ -274,18 +274,24 @@ main p {
 
 @media (max-width: 768px) {
   .slider-caption {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 0.6rem;
+    padding: 6px 10px;
+ }
+
+  .logo-rodape {
+    height: 100px;
   }
 }
-
 @media (max-width: 480px) {
   .slider-caption {
-    font-size: 0.75rem;
-    padding: 6px 10px;
+    font-size: 0.5rem;
+    padding: 4px 8px;
+  }
+
+  .logo-rodape {
+    height: 80px;
   }
 }
-
 
 /* ===== Perfis Individuais ===== */
 .bio-container {
