@@ -262,6 +262,7 @@ footer {
   .produto-texto {
     width: 100%;     /* ocupa toda largura disponível */
     margin-top: 0.8rem; /* pequeno espaçamento */
+    text-align: left;
     font-size: 0.85rem; /* deixa o texto menor no mobile */
     line-height: 1.4;   /* mantém legibilidade */
   }
