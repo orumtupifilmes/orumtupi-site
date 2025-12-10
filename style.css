@@ -201,6 +201,8 @@ footer {
   .rodape-texto p {
     font-size: 0.85rem;
     margin: 0.3rem 0;
+    max-width: 90%;         /* limita a largura do texto */
+    padding: 0.5rem;        /* cria uma “caixa” ao redor do texto */
   }
 
   .logo-rodape {
@@ -243,6 +245,9 @@ footer {
   /* Rodapé: texto menor e logos menores */
   .rodape-texto p {
     font-size: 0.7rem;
+       max-width: 50%;          /* quase toda a largura da tela, mas deixa uma margem mínima */
+      padding: 0.5rem 0.8rem;  /* espaço interno, deixando “caixa” ao redor do texto */
+    
   }
 
   .logo-rodape {
