@@ -7,148 +7,17 @@
 
   <!-- Fonte Work Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Externo -->
   <link rel="stylesheet" href="style.css">
+</head>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
-      background-color: #fff;
-      color: #000;
-      text-align: center;
-      line-height: 1.6;
-    }
+<body>
 
-    /* ===== MENU ===== */
-    nav.menu {
-      background-color: #fff;
-      border-bottom: 2px solid #000;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav.menu ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-flex;
-      gap: 2rem;
-    }
-
-    nav.menu a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      transition: 0.3s;
-    }
-
-    nav.menu a:hover {
-      color: #a34b3d;
-    }
-
-    /* ===== GALERIA ===== */
-    section.galeria {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      gap: 2rem;
-      margin: 0;
-    }
-
-    .faixa {
-      width: 100%;
-      max-width: 1600px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .faixa a {
-      width: 100%;
-      display: block;
-    }
-
-    /* ===== IMAGENS ===== */
-    .slider-item {
-      width: 100%;
-      position: relative;
-    }
-
-    .slider-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
-    }
-
-    .slider-item img:hover {
-      opacity: 0.85;
-    }
-
-    /* ===== LEGENDA QUE APARECE NA METADE DA IMAGEM ===== */
-    .slider-caption {
-      opacity: 0;
-      position: absolute;
-      bottom: 5%;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 80%;
-      font-size: 1.7rem;
-      font-weight: 500;
-      color: #fff;
-      text-shadow: 0 0 10px #000;
-      transition: opacity 0.8s ease;
-      pointer-events: none;
-    }
-
-    .slider-caption.visible {
-      opacity: 1;
-    }
-
-    /* ===== ANIMAÇÃO DE DESLIZAMENTO ===== */
-    .revela {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1.2s ease, transform 1.2s ease;
-    }
-
-    .revela.visivel {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ===== RODAPÉ ===== */
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding: 2rem 1rem;
-      border-top: 2px solid #000;
-    }
-
-    footer p {
-      margin: 0.5rem 0;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    .banner-rodape img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-
-  <!-- Menu -->
+  <!-- MENU -->
   <nav class="menu">
     <ul>
-       <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="index.html">INÍCIO</a></li>
       <li><a href="sobre.html">SOBRE</a></li>
       <li><a href="quem-somos.html">QUEM SOMOS</a></li>
       <li><a href="produtos.html">PRODUTOS</a></li>
@@ -164,91 +33,95 @@
         <div class="slider-item">
           <img src="assets/Terra-Preta-e-Negraindia.jpg" alt="Terra Preta e NegraÍndia">
         </div>
-       </a>
+      </a>
     </div>
-    
-     <!-- FAIXA 2 -->
-  <div class="faixa revela">
-    <a href="caue-santana.html">
-      <div class="slider-item">
-        <img src="assets/Banner-Filme-Umbigo.jpg" alt="Banner do filme Umbigo">
-        <div class="slider-caption">
-          <strong>Umbigo</strong> Documentário 52’, Roteiro e direção de Cauê Santana, Uruçuca - BA, 2016.
+
+    <!-- FAIXA 2 -->
+    <div class="faixa revela">
+      <a href="caue-santana.html">
+        <div class="slider-item">
+          <img src="assets/Banner-Filme-Umbigo.jpg" alt="Banner do filme Umbigo">
+          <div class="slider-caption">
+            <strong>Umbigo</strong> Documentário 52’, Roteiro e direção de Cauê Santana, Uruçuca - BA, 2016.
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
 
-  <!-- FAIXA 3 -->
-  <div class="faixa revela">
-    <a href="naya-lopes.html">
-      <div class="slider-item">
-        <img src="assets/MaeTerra.jpg" alt="Imagem Mãe Terra">
-        <div class="slider-caption">
-          <strong>Terra preta & Negraíndia</strong> Sob o mote do provérbio africano vindo do Congo, "os pássaros têm asas porque elas lhe foram passadas por outros pássaros”.
+    <!-- FAIXA 3 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <div class="slider-item">
+          <img src="assets/MaeTerra.jpg" alt="Imagem Mãe Terra">
+          <div class="slider-caption">
+            <strong>Terra preta & Negraíndia</strong> Sob o mote do provérbio africano vindo do Congo:
+            "os pássaros têm asas porque elas lhe foram passadas por outros pássaros”.
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
 
-  <!-- FAIXA 4 -->
-  <div class="faixa revela">
-    <a href="naya-lopes.html">
-      <div class="slider-item">
-        <img src="assets/CasadeZecaRitoFinal.jpg" alt="Imagem Casa de Zeca Rito Final">
-        <div class="slider-caption">
-          <strong>Coco de Improviso e a poesia solta no vento</strong> Documentário, 25’, direção e roteiro de Naya Lopes, Camaragibe - PE, 2011.
+    <!-- FAIXA 4 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <div class="slider-item">
+          <img src="assets/CasadeZecaRitoFinal.jpg" alt="Imagem Casa de Zeca Rito Final">
+          <div class="slider-caption">
+            <strong>Coco de Improviso e a poesia solta no vento</strong>
+            Documentário, 25’, direção e roteiro de Naya Lopes, Camaragibe - PE, 2011.
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
 
-  <!-- FAIXA 5 -->
-  <div class="faixa revela">
-    <a href="naya-lopes.html">
-      <div class="slider-item">
-        <img src="assets/Byebyemotel1.JPG" alt="Imagem Bye Bye Motel">
-        <div class="slider-caption">
-          <strong>Bye Bye Motel</strong> Desenvolvimento de roteiro de longa-metragem, ficção, 80 minutos, Naya Lopes, 2024.
+    <!-- FAIXA 5 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <div class="slider-item">
+          <img src="assets/Byebyemotel1.JPG" alt="Imagem Bye Bye Motel">
+          <div class="slider-caption">
+            <strong>Bye Bye Motel</strong>
+            Desenvolvimento de roteiro de longa-metragem, ficção, 80 minutos, Naya Lopes, 2024.
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
 
-  <!-- FAIXA 6 -->
-  <div class="faixa revela">
-    <a href="naya-lopes.html">
-      <div class="slider-item">
-        <img src="assets/ByeByeMotelInfos.jpg" alt="Informações Bye Bye Motel">
-      </div>
-    </a>
-  </div>
-
-  <!-- FAIXA 7 -->
-  <div class="faixa revela">
-    <a href="produtos.html">
-      <div class="slider-item">
-        <img src="assets/MestresdoMovimento.png" alt="Imagem Mestres do Movimento">
-        <div class="slider-caption">
-          <strong>Mestres do Movimento</strong> Série de documentários, 4 episódios, coprodução Canal Off/Globoplay, 2025.
+    <!-- FAIXA 6 -->
+    <div class="faixa revela">
+      <a href="naya-lopes.html">
+        <div class="slider-item">
+          <img src="assets/ByeByeMotelInfos.jpg" alt="Informações Bye Bye Motel">
         </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
 
-  <!-- FAIXA 8 -->
-  <div class="faixa revela">
-    <a href="produtos.html">
-      <div class="slider-item">
-        <img src="assets/Caminhosdoorgulho2.jpeg" alt="Imagem Caminhos do Orgulho">
-        <div class="slider-caption">
-           <strong>Caminhos do Orgulho</strong> Série de documentários, 7 episódios, coprodução Canal Off/Globoplay, estreia em 2026.
+    <!-- FAIXA 7 -->
+    <div class="faixa revela">
+      <a href="produtos.html">
+        <div class="slider-item">
+          <img src="assets/MestresdoMovimento.png" alt="Imagem Mestres do Movimento">
+          <div class="slider-caption">
+            <strong>Mestres do Movimento</strong> Série de documentários, 4 episódios, coprodução Canal Off/Globoplay, 2025.
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
 
-</section>
+    <!-- FAIXA 8 -->
+    <div class="faixa revela">
+      <a href="produtos.html">
+        <div class="slider-item">
+          <img src="assets/Caminhosdoorgulho2.jpeg" alt="Imagem Caminhos do Orgulho">
+          <div class="slider-caption">
+            <strong>Caminhos do Orgulho</strong>
+            Série de documentários, 7 episódios, coprodução Canal Off/Globoplay, estreia em 2026.
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </section>
 
   <!-- RODAPÉ -->
   <footer>
@@ -303,4 +176,3 @@
 
 </body>
 </html>
-
