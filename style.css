@@ -265,31 +265,9 @@ main p {
   }
 }
 
-
 @media (max-width: 480px) {
   main, .conteudo {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .slider-caption {
-    font-size: 0.6rem;
-    padding: 6px 10px;
- }
-
-  .logo-rodape {
-    height: 100px;
-  }
-}
-@media (max-width: 480px) {
-  .slider-caption {
-    font-size: 0.5rem;
-    padding: 4px 8px;
-  }
-
-  .logo-rodape {
-    height: 80px;
   }
 }
 
@@ -423,13 +401,13 @@ main p {
   transform: translateX(-50%) translateY(20px);
   background: rgba(0,0,0,0.55);
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* legenda ajustada */
   line-height: 1.5;
   font-weight: 400;
   padding: 10px 15px;
   border-radius: 4px;
   text-align: center;
-  max-width: 800px;
+  max-width: 66%; /* dois terços */
   opacity: 0;
   transition: opacity 0.8s ease, transform 0.8s ease;
   pointer-events: none;
@@ -439,6 +417,14 @@ main p {
 .faixa.visivel .slider-caption {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+/* ===== Ajustes da legenda no celular ===== */
+@media (max-width: 480px) {
+  .slider-caption {
+    font-size: 0.85rem;
+    max-width: 80%;
+  }
 }
 
 /* ===== Animação do texto interno do slider ===== */
@@ -452,6 +438,5 @@ main p {
     transform: translateY(0);
   }
 }
-
 
 
