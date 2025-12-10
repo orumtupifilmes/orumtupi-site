@@ -110,7 +110,7 @@ body {
 @media (max-width: 480px) {
   .slider-caption {
     font-size: 0.85rem;
-    max-width: 80%;
+    max-width: 50%;
     padding: 6px 10px;
   }
 }
@@ -186,7 +186,7 @@ footer {
 @media (max-width: 480px) {
   .slider-caption {
     font-size: 0.85rem;
-    max-width: 90%;
+    max-width: 50%;
   }
 
   .rodape-texto p {
