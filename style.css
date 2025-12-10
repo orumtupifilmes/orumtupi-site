@@ -1,243 +1,170 @@
 /* ===== Import da fonte Work Sans ===== */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 /* ===== Estilos gerais ===== */
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
   background-color: #fff;
   color: #000;
-  font-family: 'Work Sans', sans-serif;
-  text-align: center;
   line-height: 1.6;
-}
-
-.clique-indicativo {
-  font-size: 1rem;
-  color: #ff6600;
-  margin-top: 1rem;
-  font-weight: 500;
   text-align: center;
 }
 
-/* ===========================================
-   IMAGENS GIGANTES (ESTILO OLAR FILMES)
-   =========================================== */
-.imagem-full {
-  width: 100vw;
-  height: 95vh;
-  object-fit: cover;
-  display: block;
-  border: none;
+/* ===== MENU ===== */
+.menu {
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.hero {
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.faixa-grande img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.banner {
-  background-image: url('assets/banner.jpg');
-  background-repeat: repeat-x;
-  background-size: auto 180px;
-  height: 180px;
-  width: 100%;
-}
-
-/* ===== Menu ===== */
 .menu ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .menu a:hover {
-  color: #fff;
+  color: #a34b3d;
 }
 
-.faixa img:hover {
-  opacity: 0.85;
+/* ===== GALERIA ===== */
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
 }
 
-/* ===== Equipe ===== */
-section.equipe {
+.faixa {
+  width: 100%;
+  max-width: 1600px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  text-align: center;
 }
 
-.integrante {
-  width: 300px;
-  transition: transform 0.3s ease;
+.slider-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.integrante img {
+.slider-item img {
   width: 100%;
   height: auto;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
-
-.integrante img:hover {
-  opacity: 0.85;
-  transform: scale(1.02);
-}
-
-.integrante p {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.clique-indicativo {
-  font-size: 0.9rem;
-  color: #ff6600;
-  margin-top: 0.3rem;
-  font-weight: 500;
-}
-
-/* ===== Páginas secundárias ===== */
-.conteudo, main {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
-  line-height: 1.7;
-  font-size: 1.1rem;
-  text-align: left;
-  animation: fadeIn 1s ease-in;
-}
-
-.conteudo h1, main h1 {
-  text-align: center;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ff6600;
-  margin-bottom: 2rem;
-}
-
-.imagem-grande {
-  width: 100%;
-  height: auto;
-  border: 2px solid #fff;
-  margin-bottom: 20px;
-}
-
-.video {
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* ===== Rodapé ===== */
-footer {
-  text-align: center;
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-  border-top: 2px solid #fff;
-  font-size: 0.9em;
-  color: #bbb;
-}
-
-footer p {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-}
-
-.banner-rodape img {
-  width: 100%;
-  height: auto;
-  margin-top: 2rem;
   display: block;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.slider-item img:hover {
+  opacity: 0.85;
+}
+
+/* ===== LEGENDAS ===== */
+.slider-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 8px 12px;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+  max-width: 66%;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.slider-caption.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 480px) {
+  .slider-caption {
+    font-size: 0.85rem;
+    max-width: 80%;
+    padding: 6px 10px;
+  }
+}
+
+/* ===== ANIMAÇÃO DE ENTRADA ===== */
+.revela {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.revela.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background-color: #fff;
+  border-top: 2px solid #000;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #000;
+  text-align: center;
 }
 
 .rodape-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  padding: 1.5rem 1rem;
-  border-top: 2px solid #000;
   gap: 1rem;
-}
-
-.logo-rodape {
-  height: 200px;
-  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .rodape-texto {
+  flex: 1 1 300px;
   text-align: center;
-  flex: 1;
 }
 
 .rodape-texto p {
   margin: 0.3rem 0;
+  line-height: 1.4;
   font-size: 1rem;
-  line-height: 1.3;
 }
 
-/* ===== Botão Voltar ===== */
-.voltar {
-  text-align: center;
-  margin-top: 40px;
+.logo-rodape {
+  height: 120px;
+  width: auto;
 }
 
-.voltar a {
-  color: #ff6600;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.voltar a:hover {
-  color: #fff;
-}
-
-/* ===== Animação fade-in ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.conteudo h1,
-.conteudo p,
-.galeria h2,
-.galeria p,
-footer p,
-.main h1,
-main p {
-  animation: fadeIn 1.2s ease-out;
-}
-
-/* ===== Responsividade ===== */
 @media (max-width: 768px) {
-
-  nav.menu {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  nav.menu ul {
+  .menu ul {
     flex-direction: column;
     gap: 1rem;
   }
@@ -246,197 +173,30 @@ main p {
     width: 100%;
   }
 
-  section.equipe {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .integrante {
-    width: 80%;
-  }
-
-  .conteudo, main {
-    padding: 0 1rem;
-  }
-
-  .imagem-full {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 480px) {
-  main, .conteudo {
-    font-size: 1rem;
-  }
-}
-
-/* ===== Perfis Individuais ===== */
-.bio-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  background-color: #fff;
-  color: #000;
-}
-
-.bio-image img {
-  width: 300px;
-  height: auto;
-  border: 2px solid #000;
-}
-
-.bio-text {
-  max-width: 600px;
-  text-align: left;
-}
-
-.bio-text h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.bio-text h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.bio-text p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.bio-text a {
-  color: #a34b3d;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.bio-text a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Produtos ===== */
-.produto-item {
-  margin-bottom: 40px;
-}
-
-.produto-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.produto-imagem {
-  flex: 1 1 40%;
-}
-
-.produto-imagem img {
-  width: 100%;
-  height: auto;
-  border: 2px solid #fff;
-  border-radius: 8px;
-}
-
-.produto-texto {
-  flex: 1 1 55%;
-  text-align: left;
-}
-
-.produto-texto h2 {
-  color: #ff6600;
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-}
-
-.produto-texto p {
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-  .produto-grid {
+  .rodape-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .produto-imagem,
-  .produto-texto {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .produto-texto h2 {
-    font-size: 1.2rem;
+  .logo-rodape {
+    height: 100px;
   }
 }
 
-/* ===== Slider ===== */
-.slider-item {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.slider-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  font-size: 1.1rem; /* legenda ajustada */
-  line-height: 1.5;
-  font-weight: 400;
-  padding: 10px 15px;
-  border-radius: 4px;
-  text-align: center;
-  max-width: 66%; /* dois terços */
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  pointer-events: none;
-}
-
-/* Legenda visível */
-.faixa.visivel .slider-caption {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* ===== Ajustes da legenda no celular ===== */
 @media (max-width: 480px) {
   .slider-caption {
     font-size: 0.85rem;
-    max-width: 80%;
+    max-width: 90%;
+  }
+
+  .rodape-texto p {
+    font-size: 0.9rem;
+  }
+
+  .logo-rodape {
+    height: 80px;
   }
 }
 
-/* ===== Animação do texto interno do slider ===== */
-@keyframes slideText {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
