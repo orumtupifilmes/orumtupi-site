@@ -207,6 +207,20 @@ footer {
     height: 100px;
     width: auto;
   }
+   .produto-imagem img {
+    width: 80%;  /* ocupa quase toda largura do container */
+    max-width: none;  /* remove limite máximo */
+  }
+  .produto-texto {
+    width: 100%;     /* ocupa toda largura disponível */
+    margin-top: 1rem; /* dá um espaçamento entre imagem e texto */
+    text-align: left; /* mantém o texto alinhado à esquerda */
+  }
+
+  .produto-grid {
+    flex-direction: column; /* empilha imagem e texto */
+    gap: 1rem;              /* espaçamento entre imagem e texto */
+  }
 }
 
 @media (max-width: 480px) {
@@ -240,5 +254,20 @@ footer {
   .faixa img {
     width: 100%;
     height: auto;
+  }
+   .produto-imagem img {
+    width: 100%;  /* ocupa toda largura da tela */
+    max-width: none;
+  }
+  .produto-texto {
+    width: 100%;     /* ocupa toda largura disponível */
+    margin-top: 0.8rem; /* pequeno espaçamento */
+    font-size: 0.85rem; /* deixa o texto menor no mobile */
+    line-height: 1.4;   /* mantém legibilidade */
+  }
+
+  .produto-grid {
+    flex-direction: column; /* empilha imagem e texto */
+    gap: 0.8rem;            /* espaçamento menor que no tablet */
   }
 }
