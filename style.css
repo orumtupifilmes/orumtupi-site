@@ -185,10 +185,10 @@ footer {
 
   /* Rodapé: container flexível e alinhado */
   .rodape-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -206,7 +206,7 @@ footer {
   }
 
   .logo-rodape {
-    height: 100px;
+    height: 60px;
     width: auto;
   }
    .produto-imagem img {
@@ -243,18 +243,29 @@ footer {
   }
 
   /* Rodapé: texto menor e logos menores */
-  .rodape-texto p {
-    font-size: 0.7rem;
-       max-width: 50%;          /* quase toda a largura da tela, mas deixa uma margem mínima */
-      padding: 0.5rem 0.8rem;  /* espaço interno, deixando “caixa” ao redor do texto */
-    
+  .rodape-container {
+    flex-direction: row;       /* itens lado a lado */
+    align-items: center;       /* centraliza verticalmente */
+    justify-content: center;   /* centraliza horizontalmente */
+    gap: 0.3rem;               /* espaço mínimo entre elementos */
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;           /* permite quebrar linha se necessário */
+    padding: 0 0.5rem;         /* evita que encoste nas bordas da tela */
+  }
+
+  .rodape-texto {
+    text-align: center;        /* mantém texto centralizado */
+    margin: 0 0.3rem;          /* pouco espaço lateral entre texto e logos */
+    max-width: 60%;            /* limita a largura do texto */
+    font-size: 0.7rem;         /* tamanho adequado para mobile */
+    line-height: 1.2;          /* mantém legibilidade */
   }
 
   .logo-rodape {
-    height: 80px;
+    height: 50px;              /* reduz as logos para caberem melhor */
     width: auto;
   }
-
   /* Galeria: imagens continuam ocupando 100% */
   .faixa img {
     width: 100%;
