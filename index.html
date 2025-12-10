@@ -142,7 +142,6 @@
   <script>
     /* Animação de entrada */
     const elementos = document.querySelectorAll('.revela');
-
     const observer = new IntersectionObserver((entradas) => {
       entradas.forEach((entrada) => {
         if (entrada.isIntersecting) {
@@ -150,14 +149,10 @@
         }
       });
     }, { threshold: 0.2 });
-
     elementos.forEach(el => observer.observe(el));
-  </script>
 
-  <script>
     /* Legendas aparecem quando a imagem está 50% visível */
     const sliders = document.querySelectorAll('.slider-item');
-
     const sliderObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         const caption = entry.target.querySelector('.slider-caption');
@@ -170,7 +165,6 @@
         }
       });
     }, { threshold: 0.5 });
-
     sliders.forEach(slider => sliderObserver.observe(slider));
   </script>
 
