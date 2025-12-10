@@ -133,17 +133,44 @@
       display: block;
     }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      main {
-        padding: 0 1rem;
-      }
+    /* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  main {
+    padding: 0 1rem;
+  }
 
-      nav.menu ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
+  nav.menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Produtos */
+  .produto-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produto-imagem img,
+  .produto-texto {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Produtos */
+  .produto-imagem img,
+  .produto-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .produto-texto {
+    font-size: 0.95rem;
+  }
+}
+
   </style>
 </head>
 
@@ -163,15 +190,16 @@
     <h1>Produtos</h1>
 
 <h2>1) Umbigo</h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
+<div class="produto-grid">
   <!-- Imagem -->
-  <img src="assets/FilmeUmbigobanner.png" 
-       alt="Banner do longa-metragem Umbigo" 
-       style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
+  <div class="produto-imagem">
+    <img src="assets/FilmeUmbigobanner.png" 
+         alt="Banner do longa-metragem Umbigo">
+  </div>
 
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-       <p><strong>Longa-metragem</strong> — 52' minutos<br>
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Longa-metragem</strong> — 52' minutos<br>
       Direção: <strong>Cauê Santana</strong><br>
       Local: Uruçuca - BA, 2016</p>
     <p><strong>Sinopse Curta:</strong> Umbigo é como cordão de memórias! É nossa fonte ancestral, por onde nos alimentamos e crescemos. Umbigo é a ligação entre dois ou mais corpos. Cordão de memórias. O filme é a história de Dona Val, parteira. Seu nascimento, infância, retiradas, reencontros, e o conhecimento adquirido sobre um Brasil, dentro da sabedoria popular.</p>
@@ -180,174 +208,151 @@
 
     <p><strong>Trailer:</strong> <a href="https://youtu.be/1ljIMWUXgbk?si=RsNMO7nAtQ6Tn8yE" target="_blank">Assistir no YouTube</a></p>
     <p><strong>Filme completo:</strong> <a href="https://www.youtube.com/watch?v=RM9uBEICX9o" target="_blank">Assistir no YouTube</a></p>
-  </div>
+   </div>
 </div>
-
+ 
     
   
 <h2>2) Mestres do Movimento</h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
+<div class="produto-grid">
   <!-- Imagem -->
-  <img src="assets/MestresdoMovimento.png" alt="Série Mestres do Movimento" style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-  
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-    <p><strong>Série de documentários, 4 episódios</strong> <br>
-    Coprodução <strong>Canal Off/Globoplay,</strong> 2025<br>
-   
-      <p><strong>Sinopse:</strong> Série com quatro episódios que aborda o “bem-viver” de mulheres e homens acima dos 50 anos, a partir de suas experiências com a capoeira angola. Mestras e mestres, exímios conhecedores e praticantes dessa arte, que é jogo, brincadeira e dança ao mesmo tempo, um legado do modo integrativo bantu-brasileiro, presente em outras manifestações de nossa cultura e que na capoeira angola encontra o bem-estar no equilíbrio do corpo, mente e comunidade.</p>
+  <div class="produto-imagem">
+    <img src="assets/MestresdoMovimento.png" alt="Série Mestres do Movimento">
   </div>
-</div>
-<h2>3) Caminhos do Orgulho </h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <!-- Imagem -->
-  <img src="assets/Caminhosdoorgulho.jpeg" alt="Série Caminhos do Orgulho" style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-  
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-    <p><strong>Série de documentários, 7 episódios</strong> <br>
-    Coprodução <strong>Canal Off/Globoplay,</strong> estreia em 2026<br>
+
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Série de documentários, 4 episódios</strong><br>
+       Coprodução <strong>Canal Off/Globoplay,</strong> 2025</p>
    
-      <p><strong>Sinopse:</strong><strong> Caminhos do Orgulho </strong> é uma série documental com sete episódios de 26 minutos, que traz com exclusividade a experiência de 7 tours pelo mundo, vivenciadas por pessoas da comunidade LGBTQIAPN+. Personagens diversos em locações extraordinárias, desde viajantes solitários descobrindo destinos incríveis a casais em busca de romance com aventura ao atravessar territórios antes desconhecidos. Um guia LGBT de viagens, passando por destinos avançados em políticas públicas no que diz respeito a integração da diversidade e direito civis, assim com lugares hostis com repressão, porém onde a comunidade resiste e existe!</p>
-  </div>
-</div>
-<h2>4) Ângela </h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <!-- Imagem -->
-  <img src="assets/angela.jpeg" alt="Série Ângela" style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-  
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-    <p><strong>Série de ficção, 8 episódios</strong> <br>
-     Direção e roteiro: <strong> Naya Lopes </strong> <br>
-    Coprodução <strong>Orum Tupi Filmes, TV Pernambuco, </strong> 2025<br>
-   
-      <p><strong>Sinopse:</strong><strong> Ângela</strong> é uma jovem negra videomaker, moradora do Alto José do Pinho, bairro suburbano da zona norte do Recife, em pleno ano de 2013. Ela tem muita determinação e disciplina em seu dia a dia, que inclui ainda ajudar sua mãe, Cândida, no cuidado com os seus irmãos mais novos: os gêmeos João e Dandara. Os sonhos que vem tendo com o fundo do mar lhes têm causado insônia. Quando um acontecimento inesperado a lança a um estado de adoecimento mental, ela é conduzida pela ancestralidade a encontrar sua própria cura.</p>
+    <p><strong>Sinopse:</strong> Série com quatro episódios que aborda o “bem-viver” de mulheres e homens acima dos 50 anos, a partir de suas experiências com a capoeira angola. Mestras e mestres, exímios conhecedores e praticantes dessa arte, que é jogo, brincadeira e dança ao mesmo tempo, um legado do modo integrativo bantu-brasileiro, presente em outras manifestações de nossa cultura e que na capoeira angola encontra o bem-estar no equilíbrio do corpo, mente e comunidade.</p>
   </div>
 </div>
 
-<h2>5) Bye Bye Motel </h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <!-- Imagem -->
-  <img src="assets/ByeByeMotelInfos.jpg" alt="Filme Bye Bye Motel" style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
   
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-         <p><strong>Longa-metragem de ficção</strong> — 80' minutos, 2024<br>
-         Desenvolvimento de roteiro de longa-metragem: <strong> Naya Lopes </strong> <br>
-    
-      <p><strong>Sinopse:</strong>Nos anos 1990, Bia é uma adolescente negra de classe média que vive  numa cidade do interior pernambucano, Everaldo é um garoto pardo que esconde da família sua sexualidade e Roberta é uma garota branca muito popular na escola em que os três estudam. Enquanto a inauguração da barragem nos arredores do lugar agita toda população, esse grupo de adolescentes vive tensões particulares à descoberta sexual e à luta de classes sob a ordem conservadora que parece pairar no ar do Agreste.</p>
+<h2>3) Caminhos do Orgulho</h2>
+<div class="produto-grid">
+  <!-- Imagem -->
+  <div class="produto-imagem">
+    <img src="assets/Caminhosdoorgulho.jpeg" alt="Série Caminhos do Orgulho">
+  </div>
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Série de documentários, 7 episódios</strong><br>
+       Coprodução <strong>Canal Off/Globoplay,</strong> estreia em 2026</p>
+    <p><strong>Sinopse:</strong> <strong>Caminhos do Orgulho</strong> é uma série documental com sete episódios de 26 minutos, que traz com exclusividade a experiência de 7 tours pelo mundo, vivenciadas por pessoas da comunidade LGBTQIAPN+. Personagens diversos em locações extraordinárias, desde viajantes solitários descobrindo destinos incríveis a casais em busca de romance com aventura ao atravessar territórios antes desconhecidos. Um guia LGBT de viagens, passando por destinos avançados em políticas públicas no que diz respeito à integração da diversidade e direitos civis, assim como lugares hostis com repressão, porém onde a comunidade resiste e existe!</p>
   </div>
 </div>
-    
+
+<h2>4) Ângela</h2>
+<div class="produto-grid">
+  <!-- Imagem -->
+  <div class="produto-imagem">
+    <img src="assets/angela.jpeg" alt="Série Ângela">
+  </div>
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Série de ficção, 8 episódios</strong><br>
+       Direção e roteiro: <strong>Naya Lopes</strong><br>
+       Coprodução <strong>Orum Tupi Filmes, TV Pernambuco,</strong> 2025</p>
+    <p><strong>Sinopse:</strong> <strong>Ângela</strong> é uma jovem negra videomaker, moradora do Alto José do Pinho, bairro suburbano da zona norte do Recife, em 2013. Ela tem muita determinação e disciplina em seu dia a dia, que inclui ajudar sua mãe no cuidado com seus irmãos. Os sonhos que vem tendo com o fundo do mar lhe causam insônia. Quando um acontecimento inesperado a lança a um estado de adoecimento mental, ela é conduzida pela ancestralidade a encontrar sua própria cura.</p>
+  </div>
+</div>
+
+<h2>5) Bye Bye Motel</h2>
+<div class="produto-grid">
+  <!-- Imagem -->
+  <div class="produto-imagem">
+    <img src="assets/ByeByeMotelInfos.jpg" alt="Filme Bye Bye Motel">
+  </div>
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Longa-metragem de ficção</strong> — 80' minutos, 2024<br>
+       Desenvolvimento de roteiro: <strong>Naya Lopes</strong></p>
+    <p><strong>Sinopse:</strong> Nos anos 1990, Bia é uma adolescente negra de classe média que vive numa cidade do interior pernambucano, Everaldo é um garoto pardo que esconde da família sua sexualidade e Roberta é uma garota branca muito popular na escola. Enquanto a inauguração da barragem agita a população, esse grupo vive tensões particulares à descoberta sexual e à luta de classes.</p>
+  </div>
+</div>
+
 <h2>6) Tamanco</h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
+<div class="produto-grid">
   <!-- Imagem -->
-  <img src="assets/capa_tamanco.jpg"
-       alt=" Filme Tamanco"
-       style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
+  <div class="produto-imagem">
+    <img src="assets/capa_tamanco.jpg" alt="Filme Tamanco">
+  </div>
+  <!-- Texto -->
+  <div class="produto-texto">
     <p><strong>Curta-metragem documentário</strong> — 12’22” minutos<br>
-    Roteiro e direção: <strong>Cauê Santana</strong><br>
-    Local: Arcoverde - PE, 2022</p>
-
-    <p><strong>Teaser:</strong> 
-      <a href="https://www.youtube.com/watch?v=ahzKy6l8JdU" target="_blank">
-        Assistir no YouTube
-      </a>
-    </p>
-
-    <p><strong>Sinopse:</strong> No alto do cruzeiro em Arcoverde, sertão de Pernambuco, fabrica-se um instrumento musical muito psicodélico, o tamanco. De som forte e pulsante, com ele, faz-se o trupé, modalidade de samba de coco, dançado e tocado por gerações de famílias que nessa pisada do coco resiste na cultura popular. Mestre Assis Calixto, cantor, compositor e tocador, fabrica seus tamancos enquanto conta um pouco sobre as riquezas do samba de coco.</p>
-  
+       Roteiro e direção: <strong>Cauê Santana</strong><br>
+       Local: Arcoverde - PE, 2022</p>
+    <p><strong>Teaser:</strong> <a href="https://www.youtube.com/watch?v=ahzKy6l8JdU" target="_blank">Assistir no YouTube</a></p>
+    <p><strong>Sinopse:</strong> No alto do cruzeiro em Arcoverde, fabrica-se um instrumento musical muito psicodélico, o tamanco. De som forte e pulsante, com ele, faz-se o trupé, modalidade de samba de coco, dançado e tocado por gerações. Mestre Assis Calixto fabrica seus tamancos enquanto conta as riquezas do samba de coco.</p>
   </div>
 </div>
 
 <h2>7) Clipe de Imbé da Mata</h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
+<div class="produto-grid">
   <!-- Imagem -->
-  <img src="assets/imbedamata.jpg" alt="Clipe de Imbé da Mata" style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-  
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
+  <div class="produto-imagem">
+    <img src="assets/imbedamata.jpg" alt="Clipe de Imbé da Mata">
+  </div>
+  <!-- Texto -->
+  <div class="produto-texto">
     <p><strong>Videoclipe</strong> — 05’26” minutos<br>
-    Direção e Fotografia: <strong>Cauê Kamalesha</strong><br>
-   Local: Caruaru - PE, 2022
+       Direção e Fotografia: <strong>Cauê Kamalesha</strong><br>
+       Local: Caruaru - PE, 2022</p>
     <p><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=wXLGQTD-mxY&list=RDwXLGQTD-mxY&start_radio=1" target="_blank">Assistir no YouTube</a></p>
-
     <p><strong>Sinopse:</strong> <em>Imbé da Mata</em> é uma música do cancioneiro popular que evoca comunhão com a natureza e com os espíritos indígenas da mata. É o primeiro single e clipe de Raquel Santana.</p>
   </div>
 </div>
 
-
 <h2>8) Entre a serra e a malhada</h2>
-    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
+<div class="produto-grid">
   <!-- Imagem -->
-       <img src="assets/entreaserraeamalhada.jpg"
-        alt="Entre a serra e a malhada"
-   style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-      <p><strong>Curta-documentário</strong> — 16’27” minutos<br>
-      direção e fotografia: <strong>Cauê Kamalesha</strong><br>
-      Local: Caruaru - PE, 2021</p>
-
-      <p><strong>Link:</strong> 
-        <a href="https://www.youtube.com/watch?v=420GYS2iqPs" target="_blank">Assistir no YouTube</a>
-      </p>
-
-      <p><strong>Sinopse:</strong> Entre a Serra e a Malhada é um curta-documentário que retrata vivências agroecológicas nas comunidades Malhada de Pedra e Serra dos Pintos, em Caruaru-PE. O filme registrou a construção, por meio de mutirões, de uma fossa de tratamento de águas de esgoto, conhecida como BET, ⁣⁣⁣⁣⁣⁣⁣⁣⁣no Movimento de Bem Estar Social (MOBESC), em Malhada de Pedra. Já na Serra dos Pintos, a equipe acompanhou a família Gomes Silva e seu manejo de sementes crioulas e cultivo sem uso de veneno e queimadas. Entre a Serra e a Malhada mostra que Caruaru é, também, um lugar de resistência rural.</p>
-    </div>
+  <div class="produto-imagem">
+    <img src="assets/entreaserraeamalhada.jpg" alt="Entre a serra e a malhada">
+  </div>
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Curta-documentário</strong> — 16’27” minutos<br>
+       Direção e fotografia: <strong>Cauê Kamalesha</strong><br>
+       Local: Caruaru - PE, 2021</p>
+    <p><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=420GYS2iqPs" target="_blank">Assistir no YouTube</a></p>
+    <p><strong>Sinopse:</strong> Entre a Serra e a Malhada é um curta-documentário que retrata vivências agroecológicas em Caruaru-PE, mostrando resistência e cultura local.</p>
   </div>
 </div>
 
-
-  <h2>9) Coco dendê</h2>
-
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
+<h2>9) Coco Dendê</h2>
+<div class="produto-grid">
   <!-- Imagem -->
-  <img src="assets/cocodende.jpg" 
-       alt="Imagem do álbum visual Coco Dendê" 
-       style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-    <p><strong>Álbum visual</strong> <em>de Carol do Coco</em> - 11 minutos <br> 
-     Direção: <strong>Naya Lopes</strong> <br>
-    Local: Surubim - PE, 2022 </p>
-
-    <p><strong>Link:</strong> 
-      <a href="https://www.youtube.com/watch?v=3yKi1KjY3CU&list=RD3yKi1KjY3CU&start_radio=1" target="_blank">
-        Assistir no YouTube
-      </a>
-    </p>
-
-    <p><strong>Sinopse:</strong> Em meio ao cenário do agreste pernambucano, 4 canções de Carol do Coco contam histórias dessas estradas de terra que acompanham o nascer do dia e o anoitecer para tudo recomeçar.</p>
+  <div class="produto-imagem">
+    <img src="assets/cocodende.jpg" alt="Imagem do álbum visual Coco Dendê">
   </div>
-</div>
-  <h2>10) Cumade Flô</h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <!-- Imagem -->
-  <img src="assets/CumadeFlo.jpg" 
-       alt="Banner do Cumade Flô" 
-       style="width: 45%; max-width: 400px; height: auto; border: 2px solid #000;">
-
-  <!-- Texto ao lado -->
-  <div style="flex: 1; min-width: 250px; text-align: left;">
-       <p><strong>Videoclipe</strong> — 03’14” minutos<br>
-      Direção de fotografia: <strong>Cauê Kamalesha</strong><br>
-      Local: Caruaru - PE, 2021</p>
-       <p><strong>Link:</strong> 
-      <a href="https://www.youtube.com/watch?v=zEOFeJpvYwA" target="_blank">
-        Assistir no YouTube
-      </a>
-    </p> 
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Álbum visual</strong> <em>de Carol do Coco</em> - 11 minutos<br>
+       Direção: <strong>Naya Lopes</strong><br>
+       Local: Surubim - PE, 2022</p>
+    <p><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=3yKi1KjY3CU&list=RD3yKi1KjY3CU&start_radio=1" target="_blank">Assistir no YouTube</a></p>
+    <p><strong>Sinopse:</strong> Em meio ao agreste pernambucano, 4 canções de Carol do Coco contam histórias dessas estradas que acompanham o nascer e o anoitecer para tudo recomeçar.</p>
   </div>
 </div>
 
+<h2>10) Cumade Flô</h2>
+<div class="produto-grid">
+  <!-- Imagem -->
+  <div class="produto-imagem">
+    <img src="assets/CumadeFlo.jpg" alt="Banner do Cumade Flô">
+  </div>
+  <!-- Texto -->
+  <div class="produto-texto">
+    <p><strong>Videoclipe</strong> — 03’14” minutos<br>
+       Direção de fotografia: <strong>Cauê Kamalesha</strong><br>
+       Local: Caruaru - PE, 2021</p>
+    <p><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=zEOFeJpvYwA" target="_blank">Assistir no YouTube</a></p>
+  </div>
+</div>
 <div class="voltar">
+  
   <a href="index.html">← Voltar à página inicial</a>
 </div>
   </main>
