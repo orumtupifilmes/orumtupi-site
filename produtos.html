@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,7 @@
       line-height: 1.7;
     }
 
-    /* Menu */
+    /* ===== Menu ===== */
     nav.menu {
       background-color: #fff;
       border-bottom: 2px solid #000;
@@ -50,7 +50,7 @@
       color: #a34b3d;
     }
 
-    /* Conteúdo principal */
+    /* ===== Conteúdo principal ===== */
     main {
       max-width: 900px;
       margin: 4rem auto;
@@ -71,7 +71,6 @@
       margin-top: 2rem;
       font-size: 1.3rem;
       color: #000;
-      text-transform: none;
     }
 
     main p {
@@ -89,13 +88,13 @@
       color: #000;
     }
 
-    /* Fade-in */
+    /* ===== Fade-in ===== */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Botão voltar */
+    /* ===== Botão voltar ===== */
     .voltar {
       text-align: center;
       margin-top: 3rem;
@@ -112,7 +111,7 @@
       color: #000;
     }
 
-    /* Rodapé */
+    /* ===== Rodapé ===== */
     footer {
       text-align: center;
       margin-top: 4rem;
@@ -126,66 +125,59 @@
       line-height: 1.5;
     }
 
-    .banner-rodape img {
-      width: 100%;
-      height: auto;
-      margin-top: 2rem;
-      display: block;
+    /* ===== Responsividade ===== */
+    @media (max-width: 768px) {
+      main {
+        padding: 0 1rem;
+      }
+
+      nav.menu ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      main h2 {
+        text-align: left;
+      }
+
+      .produto-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .produto-imagem img,
+      .produto-texto {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+      }
     }
 
-    /* ===== Responsividade ===== */
-@media (max-width: 768px) {
-  main {
-    padding: 0 1rem;
-  }
+    @media (max-width: 480px) {
+      .produto-imagem img,
+      .produto-texto {
+        width: 100%;
+        max-width: 100%;
+      }
 
-  nav.menu ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-    main h2 {
-    text-align: left;
-  }
+      .produto-texto {
+        font-size: 0.95rem;
+        text-align: left;
+      }
 
-  /* Produtos */
-  .produto-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .produto-imagem img,
-  .produto-texto {
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Produtos */
-  .produto-imagem img,
-  .produto-texto {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .produto-texto {
-    font-size: 0.95rem;
-    text-align: left;
-  }
-    main h2 {
-    text-align: left;
-  }
-}
-
+      main h2 {
+        text-align: left;
+      }
+    }
   </style>
 </head>
 
 <body>
- <!-- Menu -->
+
+  <!-- ===== Novo Menu ===== -->
   <nav class="menu">
     <ul>
-       <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="index.html">INÍCIO</a></li>
       <li><a href="sobre.html">SOBRE</a></li>
       <li><a href="quem-somos.html">QUEM SOMOS</a></li>
       <li><a href="produtos.html">PRODUTOS</a></li>
@@ -193,7 +185,7 @@
   </nav>
 
   <!-- Conteúdo -->
-  <main>
+   <main>
     <h1>Produtos</h1>
 
 <h2>1) Umbigo</h2>
