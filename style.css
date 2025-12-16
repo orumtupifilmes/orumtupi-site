@@ -16,6 +16,11 @@ body {
   text-align: center;
 }
 
+main h2 {
+  text-align: left;
+}
+
+
 /* ===== MENU ===== */
 .menu {
   background-color: #fff;
